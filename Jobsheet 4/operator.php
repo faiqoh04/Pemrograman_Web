@@ -45,6 +45,8 @@ echo "Hasil dari a || b: " . ($hasilOr ? 'True' : 'False') . "<br>";
 echo "Hasil dari !a: " . ($hasilNotA ? 'True' : 'False') . "<br>";
 echo "Hasil dari !b: " . ($hasilNotB ? 'True' : 'False') . "<br>";
 
+echo "<br>";
+
 $a += $b;
 echo "Setelah operasi a += b, nilai a menjadi: $a <br>";
 $a -= $b;
@@ -56,12 +58,8 @@ echo "Setelah operasi a /= b, nilai a menjadi: $a <br>";
 $a %= $b;
 echo "Setelah operasi a %= b, nilai a menjadi: $a <br>";
 
-$hasilIdentik = $a === $b;
-$hasilTidakIdentik = $a !== $b;
-echo "Apakah a identik dengan b? " . ($hasilIdentik ? 'Ya' : 'Tidak') . "<br>";
-echo "Apakah a tidak identik dengan b? " . ($hasilTidakIdentik ? 'Ya' : 'Tidak') . "<br>";
+echo "<br>";
 
-// JAWABAN SOAL
 // Jumlah total kursi di restoran
 $jumlahKursi = 45;
 
@@ -75,8 +73,8 @@ $kursiKosong = $jumlahKursi - $kursiTerisi;
 $persentaseKosong = ($kursiKosong / $jumlahKursi) * 100;
 
 // Menampilkan hasil
+echo "Total kursi dalam restoran: $jumlahKursi <br>";
+echo "Jumlah kursi yang sudah terisi: $kursiTerisi <br>";
 echo "Jumlah kursi yang masih kosong: $kursiKosong <br>";
 echo "Persentase kursi yang masih kosong: " . number_format($persentaseKosong, 2) . "%";
 ?>
-
-

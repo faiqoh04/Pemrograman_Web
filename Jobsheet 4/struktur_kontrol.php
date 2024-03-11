@@ -46,14 +46,14 @@ echo "Total skor ujian adalah: $totalSkor <br>";
 $nilaiSiswa = [85, 92, 58, 64, 90, 55, 88, 79, 70, 96];
 
 foreach ($nilaiSiswa as $nilai) {
-if ($nilai < 60) {
-    echo "nilai: $nilai (tidak lulus) <br>";
-    continue;
+    if ($nilai < 60) {
+        echo "nilai: $nilai (tidak lulus) <br>";
+        continue;
+    }
+    echo "nilai: $nilai (lulus) <br>";
 }
-}
-echo "nilai: $nilai (lulus) <br>";
 
-// JAWABAN SOAL 1
+// SOAL 4.6
 // Daftar nilai dari 10 siswa
 $nilai_siswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
 
@@ -73,7 +73,7 @@ echo "Daftar nilai siswa: " . implode(", ", $nilai_siswa) . "<br>";
 echo "Total nilai setelah mengabaikan dua nilai terendah dan dua nilai tertinggi: $total_nilai <br>";
 echo "Nilai rata-rata setelah mengabaikan dua nilai terendah dan dua nilai tertinggi: $rata_rata <br>";
 
-//JAWABAN SOAL 2
+// SOAL 4.7
 $harga_produk = 120000;
 $diskon_persen = 20;
 $batas_diskon = 100000;
@@ -97,7 +97,7 @@ if ($harga_produk > $batas_diskon) {
     echo "Harga yang harus dibayar: Rp " . number_format($harga_setelah_diskon, 2, ',', '.') . "<br>";
 }
 
-//JAWABAN SOAL 3
+// SOAL 4.8
 $skor_pemain = 750; // Misalnya, skor pemain adalah 750
 echo "Total skor pemain adalah: $skor_pemain <br>";
 if ($skor_pemain > 500) {

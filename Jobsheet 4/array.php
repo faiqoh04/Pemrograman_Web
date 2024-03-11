@@ -52,7 +52,7 @@ foreach ($daftarNilai[$mataKuliah] as $nilai) {
     echo $nilai[0] . ": " . $nilai[1] . "<br>";
 }
 
-// JAWABAN SOAL
+// SOAL 5.4
 $data_nilai = [
     'Alice' => 85,
     'Bob' => 92,

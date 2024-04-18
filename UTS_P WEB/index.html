@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS PEMROGRAMAN WEB</title>
+    <link rel="stylesheet" href="style.css"> <!-- Hubungkan file CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Hubungkan file JavaScript untuk validasi formulir -->
+    <script src="validasiForm.js" defer></script>
+    <!-- Gunakan atribut defer untuk memastikan file JavaScript dijalankan setelah DOM selesai dimuat -->
+</head>
+
+<body>
+
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2> <a href="#" class="logo">BIMBEL KU</a></h2>
+            <div class="navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Info</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+        <div class="content">
+            <div class="info">
+                <h2> Bimbingan belajar kombinasi <br><span> offline dan online terbaik </span></h2>
+                <p>Belajar dengan fasilitas modern, guru alumni PTN, dan dilengkapi kelas pengembangan diri. Coba
+                    pengalaman belajar di BIMBEL KU, ikuti kelas gratisnya, sekarang!</p>
+                <a href="#" class="info-btn"> REGISTRASI</a>
+
+
+                <!-- FORM REGISTRASI -->
+                <div id="registrasi" class="registrasi">
+                    <div class="container">
+                        <h1>Lengkapi formulir berikut ini</h1>
+                    </div>
+                    <form id="formregistrasi" action="submitdata.php" method="post" onsubmit="return validasiForm()"
+                        enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="namaLengkap">Nama Lengkap Siswa </label>
+                                <input type="text" id="namaLengkap" name="namaLengkap" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="kelas">Kelas Siswa</label>
+                                <select id="kelas" name="kelas" class="form-control" required>
+                                    <option value="">Pilih Kelas Siswa</option>
+                                    <option value="7 SMP">7 SMP</option>
+                                    <option value="8 SMP">8 SMP</option>
+                                    <option value="9 SMP">9 SMP</option>
+                                    <option value="10 SMA">10 SMA</option>
+                                    <option value="11 SMA">11 SMA</option>
+                                    <option value="12 SMA">12 SMA</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="asalSekolah">Asal Sekolah Siswa</label>
+                                <input type="text" id="asalSekolah" name="asalSekolah" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nomorHpSiswa">Nomor HP Siswa</label>
+                                <input type="text" id="nomorHpSiswa" name="nomorHpSiswa" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="nomorHpOrangtuaWali">Nomor HP Orangtua/Wali</label>
+                                <input type="text" id="nomorHpOrangtuaWali" name="nomorHpOrangtuaWali"
+                                    class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary">Kirim Formulir</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div> <!-- Penutup tag div untuk content -->
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var registrasiBtn = document.querySelector('.info-btn');
+            var registrasiDiv = document.getElementById('registrasi');
+
+            registrasiBtn.addEventListener('click', function (event) {
+                event.preventDefault(); // Menghentikan aksi default dari link
+                registrasiDiv.scrollIntoView({ behavior: 'smooth' }); // Menggulir ke div dengan animasi smooth
+            });
+        });
+    </script>
+</body>
+
+</html>
